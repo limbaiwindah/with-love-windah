@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* --- Global Reset & Vintage Ledger Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cutive Mono', monospace;
+  background-color: #F3EFEA; /* Deep aged parchment */
+  color: #262220;            /* Dark espresso ink */
+  line-height: 1.7;
+  font-size: 13px;        
+  display: flex;
+  justify-content: center;
+}
+
+a {
+    color: #5C6E61;
+}
+
+#main-div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: #F8F5F0;
+  border: 1px solid #D9CEBE;
+  padding: 2rem 1.5rem;      /* Responsive inner spacing */
+  box-shadow: 0 12px 35px rgba(38, 34, 32, 0.06), inset 0 0 40px rgba(220, 210, 195, 0.3);
+  position: relative;
+}
+
+/* Subtle double border line at the top to mimic bound ledger paper
+#main-div::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid #D9CEBE;
+  pointer-events: none;
+} */
+
+/* --- Main Page Title --- */
+#main-div > h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  color: #262220;
+  border-bottom: 1px solid #D9CEBE;
+  padding-bottom: 0.8rem;
+}
+
+
+/* --- 1. Prayer Request Section --- */
+#prayer-req {
+  background: #FFFFFF;
+  padding: 1.5rem 1.2rem;
+  border: 1px solid #D9CEBE;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.mono-label {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #131614; /* Faded botanical ink */
+  display: block;
+  margin-bottom: 0.3rem;
+  margin-top: 1.5rem;
+}
+
+.mono-label:first-of-type {
+  margin-top: 0;
+}
+
+.mono-input {
+  font-family: 'Cutive Mono', monospace;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #C9BCAB;
+  padding: 0.5rem 0;
+  color: #262220;
+  outline: none;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.mono-input:focus {
+  border-bottom: 1px solid #5C6E61;
+}
+
+.mono-btn {
+  font-family: 'Cutive Mono', monospace;
+  background-color: #5C6E61;
+  color: #F8F5F0;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background 0.2s ease;
+}
+
+.mono-btn:hover {
+  background-color: #48564D;
+}
+
+#confirmation {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #5C6E61;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+
+/* --- 2. About Windah Section --- */
+#abt-windah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  border-bottom: 1px solid #D9CEBE;
+  padding-bottom: 2.5rem;
+}
+
+#abt-windah article img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #C9BCAB;
+  padding: 3px;
+  background: #FFFFFF;
+}
+
+#abt-windah h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #262220;
+  margin-bottom: 0.1rem;
+}
+
+#abt-windah h3 {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #5C6E61;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+#abt-windah p {
+  color: #38322E;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 13px;
+  text-align: justify;
+}
+
+
+/* --- Quick Dails / Logbook Accordion Style (Responsive) --- */
+#quick-dails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+#quick-dails > h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  color: #262220;
+  margin-bottom: 0.3rem;
+}
+
+.logbook-container {
+  background: #FFFFFF;
+  border: 1px solid #D9CEBE;
+  padding: 0.5rem 1.2rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.log-entry {
+  border-bottom: 1px dotted #E5DCD0;
+  padding: 0.75rem 0;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* The clickable accordion summary row */
+.log-title {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #38322E;
+  cursor: pointer;
+  list-style: none; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: color 0.15s ease;
+}
+
+.log-title::-webkit-details-marker {
+  display: none; 
+}
+
+/* Custom indicator symbol (+ / —) */
+.log-title::after {
+  content: "+";
+  font-family: 'Cutive Mono', monospace;
+  font-size: 14px;
+  color: #5C6E61;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+details[open] .log-title::after {
+  content: "—";
+}
+
+.log-title:hover {
+  color: #5C6E61;
+}
+
+/* The expanded verse tags drawer - stacked neatly underneath for mobile */
+.log-verses {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding-top: 0.6rem;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.log-verses span {
+  font-family: 'Cutive Mono', monospace;
+  background: #F4EFEB;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+  border: 1px solid #E3DBD0;
+  font-size: 11px;
+  color: #262220;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Larger screen layout adjustments (Desktops & Tablets) --- */
+@media (min-width: 640px) {
+  body {
+    padding: 4rem 1rem;
+  }
+  
+  #main-div {
+    padding: 3rem 2.5rem;
+  }
+  
+  #main-div::before {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+  
+  #prayer-req {
+    padding: 2rem 1.8rem;
+  }
+  
+  .logbook-container {
+    padding: 0.5rem 1.5rem;
+  }
+}
